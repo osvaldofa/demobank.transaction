@@ -7,9 +7,9 @@ namespace DemoBank.Transaction.Infrastructure.Communication.Services
 {
     public class AccountService : IAccountService
     {
-        private ILogger<AccountService> _logger;
+        private readonly ILogger<AccountService> _logger;
         private readonly IConfiguration _config;
-        private HttpClient httpClient;
+        private readonly HttpClient httpClient;
 
         public AccountService(ILogger<AccountService> logger, IConfiguration config)
         {

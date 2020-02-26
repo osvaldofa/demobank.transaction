@@ -9,9 +9,9 @@ namespace DemoBank.Transaction.Domain.Services
 {
     public class TransactionServices : ITransactionServices
     {
-        private ITransactionRepository _transactionRepository;
-        private IAccountRepository _accountRepository;
-        private IAccountService _accountService;
+        private readonly ITransactionRepository _transactionRepository;
+        private readonly IAccountRepository _accountRepository;
+        private readonly IAccountService _accountService;
 
         /// <summary>
         /// Constructor method.
@@ -50,15 +50,18 @@ namespace DemoBank.Transaction.Domain.Services
 
         private long CreateDepositTransaction(TransactionModel transaction)
         {
-            if (AccountExists(transaction?.DestinationAccount) && transaction.Value > 0)
+            if (transaction != null)
             {
-                // If external Account update.
-                if (this._accountService.UpdateAccountBalance(transaction))
+                if (AccountExists(transaction?.DestinationAccount) && transaction.Value > 0)
                 {
-                    // Transaction registration.
-                    transaction.When = DateTime.Now;
-                    long transactionId = this._transactionRepository.Save(transaction);
-                    return transactionId;
+                    // If external Account update.
+                    if (this._accountService.UpdateAccountBalance(transaction))
+                    {
+                        // Transaction registration.
+                        transaction.When = DateTime.Now;
+                        long transactionId = this._transactionRepository.Save(transaction);
+                        return transactionId;
+                    }
                 }
             }                
             return 0;
@@ -66,19 +69,20 @@ namespace DemoBank.Transaction.Domain.Services
 
         private long CreateWithdrawTransaction(TransactionModel transaction)
         {
-            if (AccountExists(transaction?.DestinationAccount)
-                && AccountEnoughtBalance(transaction.DestinationAccount, transaction.Value))
+            if (transaction != null)
             {
-                // Transaction registration.
-                transaction.When = DateTime.Now;
-                long transactionId = this._transactionRepository.Save(transaction);
+                if (AccountExists(transaction?.DestinationAccount) && AccountEnoughtBalance(transaction.DestinationAccount, transaction.Value))
+                {
+                    // If external Account update.
+                    if (this._accountService.UpdateAccountBalance(transaction))
+                    {
+                        // Transaction registration.
+                        transaction.When = DateTime.Now;
+                        long transactionId = this._transactionRepository.Save(transaction);
 
-                // Account update.
-                AccountModel account = this._accountRepository.GetById(transaction.DestinationAccount.AccountNumber);
-                account.Balance -= transaction.Value;
-                this._accountRepository.Save(account);
-
-                return transactionId;
+                        return transactionId;
+                    }
+                }
             }
             return 0;
         }

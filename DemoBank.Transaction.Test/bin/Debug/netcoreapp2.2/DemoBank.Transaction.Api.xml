@@ -14,6 +14,7 @@
             Constructor method for Transaction Controller.
             </summary>
             <param name="transactionServices">Transaction services instantiated by dependency injection.</param>
+            /// <param name="logger">Logger services instantiated by dependency injection.</param>
         </member>
         <member name="M:DemoBank.Transaction.Presentation.Controllers.TransactionController.CreateTransaction(DemoBank.Transaction.Infrastructure.Data.Models.TransactionModel)">
             <summary>

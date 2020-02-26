@@ -1,6 +1,6 @@
 ﻿namespace DemoBank.Transaction.CrossCutting.Enumerators
 {
-    public class TransactionTypes
+    public static class TransactionTypes
     {
         public const string DEPOSIT = "deposit";
         public const string WITHDRAW = "withdraw";

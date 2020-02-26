@@ -14,12 +14,13 @@ namespace DemoBank.Transaction.Presentation.Controllers
     {
 
         private readonly ILogger _logger;
-        private ITransactionServices _transactionServices;
+        private readonly ITransactionServices _transactionServices;
 
         /// <summary>
         /// Constructor method for Transaction Controller.
         /// </summary>
         /// <param name="transactionServices">Transaction services instantiated by dependency injection.</param>
+        /// /// <param name="logger">Logger services instantiated by dependency injection.</param>
         public TransactionController(ITransactionServices transactionServices, ILogger<TransactionController> logger)
         {
             this._transactionServices = transactionServices;
@@ -47,8 +48,7 @@ namespace DemoBank.Transaction.Presentation.Controllers
             {
                 _logger.LogInformation("---> Transaction created for account " 
                     + transaction.DestinationAccount.AccountNumber 
-                    + " - Type: " + transaction.TransactionType + " - Transaction Id: " + transactionId);
-                //return Created("transactionId", transactionId);
+                    + " - Type: " + transaction.TransactionType + " - Transaction Id: " + transactionId);                
                 return transactionId;
             }                
         }

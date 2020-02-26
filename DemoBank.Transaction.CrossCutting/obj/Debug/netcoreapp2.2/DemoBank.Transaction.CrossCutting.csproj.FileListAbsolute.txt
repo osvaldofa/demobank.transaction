@@ -5,3 +5,5 @@ C:\Development\Test\DemoBank\DemoBank.Transaction\DemoBank.Transaction.CrossCutt
 C:\Development\Test\DemoBank\DemoBank.Transaction\DemoBank.Transaction.CrossCutting\obj\Debug\netcoreapp2.2\DemoBank.Transaction.CrossCutting.AssemblyInfo.cs
 C:\Development\Test\DemoBank\DemoBank.Transaction\DemoBank.Transaction.CrossCutting\obj\Debug\netcoreapp2.2\DemoBank.Transaction.CrossCutting.dll
 C:\Development\Test\DemoBank\DemoBank.Transaction\DemoBank.Transaction.CrossCutting\obj\Debug\netcoreapp2.2\DemoBank.Transaction.CrossCutting.pdb
+C:\Development\Test\DemoBank\DemoBank.Transaction\DemoBank.Transaction.CrossCutting\obj\Debug\netcoreapp2.2\DemoBank.Transaction.CrossCutting.csprojAssemblyReference.cache
+C:\Development\Test\DemoBank\DemoBank.Transaction\DemoBank.Transaction.CrossCutting\obj\Debug\netcoreapp2.2\DemoBank.Transaction.CrossCutting.csproj.CoreCompileInputs.cache
