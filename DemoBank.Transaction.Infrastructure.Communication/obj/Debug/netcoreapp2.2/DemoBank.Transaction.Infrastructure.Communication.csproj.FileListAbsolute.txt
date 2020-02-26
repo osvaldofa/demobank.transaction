@@ -1,0 +1,15 @@
+C:\Development\Test\DemoBank\DemoBank.Transaction\DemoBank.Transaction.Infrastructure.Communication\bin\Debug\netcoreapp2.2\DemoBank.Transaction.Infrastructure.Communication.deps.json
+C:\Development\Test\DemoBank\DemoBank.Transaction\DemoBank.Transaction.Infrastructure.Communication\bin\Debug\netcoreapp2.2\DemoBank.Transaction.Infrastructure.Communication.runtimeconfig.json
+C:\Development\Test\DemoBank\DemoBank.Transaction\DemoBank.Transaction.Infrastructure.Communication\bin\Debug\netcoreapp2.2\DemoBank.Transaction.Infrastructure.Communication.runtimeconfig.dev.json
+C:\Development\Test\DemoBank\DemoBank.Transaction\DemoBank.Transaction.Infrastructure.Communication\bin\Debug\netcoreapp2.2\DemoBank.Transaction.Infrastructure.Communication.dll
+C:\Development\Test\DemoBank\DemoBank.Transaction\DemoBank.Transaction.Infrastructure.Communication\bin\Debug\netcoreapp2.2\DemoBank.Transaction.Infrastructure.Communication.pdb
+C:\Development\Test\DemoBank\DemoBank.Transaction\DemoBank.Transaction.Infrastructure.Communication\bin\Debug\netcoreapp2.2\DemoBank.Transaction.CrossCutting.dll
+C:\Development\Test\DemoBank\DemoBank.Transaction\DemoBank.Transaction.Infrastructure.Communication\bin\Debug\netcoreapp2.2\DemoBank.Transaction.Infrastructure.Data.dll
+C:\Development\Test\DemoBank\DemoBank.Transaction\DemoBank.Transaction.Infrastructure.Communication\bin\Debug\netcoreapp2.2\DemoBank.Transaction.Infrastructure.Data.pdb
+C:\Development\Test\DemoBank\DemoBank.Transaction\DemoBank.Transaction.Infrastructure.Communication\bin\Debug\netcoreapp2.2\DemoBank.Transaction.CrossCutting.pdb
+C:\Development\Test\DemoBank\DemoBank.Transaction\DemoBank.Transaction.Infrastructure.Communication\obj\Debug\netcoreapp2.2\DemoBank.Transaction.Infrastructure.Communication.csprojAssemblyReference.cache
+C:\Development\Test\DemoBank\DemoBank.Transaction\DemoBank.Transaction.Infrastructure.Communication\obj\Debug\netcoreapp2.2\DemoBank.Transaction.Infrastructure.Communication.AssemblyInfoInputs.cache
+C:\Development\Test\DemoBank\DemoBank.Transaction\DemoBank.Transaction.Infrastructure.Communication\obj\Debug\netcoreapp2.2\DemoBank.Transaction.Infrastructure.Communication.AssemblyInfo.cs
+C:\Development\Test\DemoBank\DemoBank.Transaction\DemoBank.Transaction.Infrastructure.Communication\obj\Debug\netcoreapp2.2\DemoBank.Transaction.Infrastructure.Communication.csproj.CopyComplete
+C:\Development\Test\DemoBank\DemoBank.Transaction\DemoBank.Transaction.Infrastructure.Communication\obj\Debug\netcoreapp2.2\DemoBank.Transaction.Infrastructure.Communication.dll
+C:\Development\Test\DemoBank\DemoBank.Transaction\DemoBank.Transaction.Infrastructure.Communication\obj\Debug\netcoreapp2.2\DemoBank.Transaction.Infrastructure.Communication.pdb

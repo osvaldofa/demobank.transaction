@@ -1,0 +1,64 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v2.2",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v2.2": {
+      "DemoBank.Transaction.Domain/1.0.0": {
+        "dependencies": {
+          "DemoBank.Transaction.CrossCutting": "1.0.0",
+          "DemoBank.Transaction.Infrastructure.Communication": "1.0.0",
+          "DemoBank.Transaction.Infrastructure.Data": "1.0.0"
+        },
+        "runtime": {
+          "DemoBank.Transaction.Domain.dll": {}
+        }
+      },
+      "DemoBank.Transaction.CrossCutting/1.0.0": {
+        "runtime": {
+          "DemoBank.Transaction.CrossCutting.dll": {}
+        }
+      },
+      "DemoBank.Transaction.Infrastructure.Communication/1.0.0": {
+        "dependencies": {
+          "DemoBank.Transaction.Infrastructure.Data": "1.0.0"
+        },
+        "runtime": {
+          "DemoBank.Transaction.Infrastructure.Communication.dll": {}
+        }
+      },
+      "DemoBank.Transaction.Infrastructure.Data/1.0.0": {
+        "dependencies": {
+          "DemoBank.Transaction.CrossCutting": "1.0.0"
+        },
+        "runtime": {
+          "DemoBank.Transaction.Infrastructure.Data.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "DemoBank.Transaction.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DemoBank.Transaction.CrossCutting/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DemoBank.Transaction.Infrastructure.Communication/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DemoBank.Transaction.Infrastructure.Data/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

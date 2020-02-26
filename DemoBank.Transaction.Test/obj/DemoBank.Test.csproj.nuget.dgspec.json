@@ -1,0 +1,367 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Development\\Test\\DemoBank\\DemoBank.Transaction\\DemoBank.Test\\DemoBank.Test.csproj": {}
+  },
+  "projects": {
+    "C:\\Development\\Test\\DemoBank\\DemoBank.Transaction\\DemoBank.Account.Data\\DemoBank.Transaction.Infrastructure.Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Development\\Test\\DemoBank\\DemoBank.Transaction\\DemoBank.Account.Data\\DemoBank.Transaction.Infrastructure.Data.csproj",
+        "projectName": "DemoBank.Transaction.Infrastructure.Data",
+        "projectPath": "C:\\Development\\Test\\DemoBank\\DemoBank.Transaction\\DemoBank.Account.Data\\DemoBank.Transaction.Infrastructure.Data.csproj",
+        "packagesPath": "C:\\Users\\o.ferreira.alves\\.nuget\\packages\\",
+        "outputPath": "C:\\Development\\Test\\DemoBank\\DemoBank.Transaction\\DemoBank.Account.Data\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\o.ferreira.alves\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\LocalNugetFeed": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {
+              "C:\\Development\\Test\\DemoBank\\DemoBank.Transaction\\DemoBank.CrossCutting\\DemoBank.CrossCutting.csproj": {
+                "projectPath": "C:\\Development\\Test\\DemoBank\\DemoBank.Transaction\\DemoBank.CrossCutting\\DemoBank.CrossCutting.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Development\\Test\\DemoBank\\DemoBank.Transaction\\DemoBank.Account.Domain\\DemoBank.Transaction.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Development\\Test\\DemoBank\\DemoBank.Transaction\\DemoBank.Account.Domain\\DemoBank.Transaction.Domain.csproj",
+        "projectName": "DemoBank.Transaction.Domain",
+        "projectPath": "C:\\Development\\Test\\DemoBank\\DemoBank.Transaction\\DemoBank.Account.Domain\\DemoBank.Transaction.Domain.csproj",
+        "packagesPath": "C:\\Users\\o.ferreira.alves\\.nuget\\packages\\",
+        "outputPath": "C:\\Development\\Test\\DemoBank\\DemoBank.Transaction\\DemoBank.Account.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\o.ferreira.alves\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\LocalNugetFeed": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {
+              "C:\\Development\\Test\\DemoBank\\DemoBank.Transaction\\DemoBank.Account.Data\\DemoBank.Transaction.Infrastructure.Data.csproj": {
+                "projectPath": "C:\\Development\\Test\\DemoBank\\DemoBank.Transaction\\DemoBank.Account.Data\\DemoBank.Transaction.Infrastructure.Data.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Development\\Test\\DemoBank\\DemoBank.Transaction\\DemoBank.Account.Presentation\\DemoBank.Transaction.Api.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Development\\Test\\DemoBank\\DemoBank.Transaction\\DemoBank.Account.Presentation\\DemoBank.Transaction.Api.csproj",
+        "projectName": "DemoBank.Transaction.Api",
+        "projectPath": "C:\\Development\\Test\\DemoBank\\DemoBank.Transaction\\DemoBank.Account.Presentation\\DemoBank.Transaction.Api.csproj",
+        "packagesPath": "C:\\Users\\o.ferreira.alves\\.nuget\\packages\\",
+        "outputPath": "C:\\Development\\Test\\DemoBank\\DemoBank.Transaction\\DemoBank.Account.Presentation\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\o.ferreira.alves\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\LocalNugetFeed": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {
+              "C:\\Development\\Test\\DemoBank\\DemoBank.Transaction\\DemoBank.Account.Data\\DemoBank.Transaction.Infrastructure.Data.csproj": {
+                "projectPath": "C:\\Development\\Test\\DemoBank\\DemoBank.Transaction\\DemoBank.Account.Data\\DemoBank.Transaction.Infrastructure.Data.csproj"
+              },
+              "C:\\Development\\Test\\DemoBank\\DemoBank.Transaction\\DemoBank.Account.Domain\\DemoBank.Transaction.Domain.csproj": {
+                "projectPath": "C:\\Development\\Test\\DemoBank\\DemoBank.Transaction\\DemoBank.Account.Domain\\DemoBank.Transaction.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.AspNetCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "Microsoft.AspNetCore.Razor.Design": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Development\\Test\\DemoBank\\DemoBank.Transaction\\DemoBank.CrossCutting\\DemoBank.CrossCutting.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Development\\Test\\DemoBank\\DemoBank.Transaction\\DemoBank.CrossCutting\\DemoBank.CrossCutting.csproj",
+        "projectName": "DemoBank.CrossCutting",
+        "projectPath": "C:\\Development\\Test\\DemoBank\\DemoBank.Transaction\\DemoBank.CrossCutting\\DemoBank.CrossCutting.csproj",
+        "packagesPath": "C:\\Users\\o.ferreira.alves\\.nuget\\packages\\",
+        "outputPath": "C:\\Development\\Test\\DemoBank\\DemoBank.Transaction\\DemoBank.CrossCutting\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\o.ferreira.alves\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\LocalNugetFeed": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Development\\Test\\DemoBank\\DemoBank.Transaction\\DemoBank.Test\\DemoBank.Test.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Development\\Test\\DemoBank\\DemoBank.Transaction\\DemoBank.Test\\DemoBank.Test.csproj",
+        "projectName": "DemoBank.Test",
+        "projectPath": "C:\\Development\\Test\\DemoBank\\DemoBank.Transaction\\DemoBank.Test\\DemoBank.Test.csproj",
+        "packagesPath": "C:\\Users\\o.ferreira.alves\\.nuget\\packages\\",
+        "outputPath": "C:\\Development\\Test\\DemoBank\\DemoBank.Transaction\\DemoBank.Test\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\o.ferreira.alves\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\LocalNugetFeed": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {
+              "C:\\Development\\Test\\DemoBank\\DemoBank.Transaction\\DemoBank.Account.Data\\DemoBank.Transaction.Infrastructure.Data.csproj": {
+                "projectPath": "C:\\Development\\Test\\DemoBank\\DemoBank.Transaction\\DemoBank.Account.Data\\DemoBank.Transaction.Infrastructure.Data.csproj"
+              },
+              "C:\\Development\\Test\\DemoBank\\DemoBank.Transaction\\DemoBank.Account.Domain\\DemoBank.Transaction.Domain.csproj": {
+                "projectPath": "C:\\Development\\Test\\DemoBank\\DemoBank.Transaction\\DemoBank.Account.Domain\\DemoBank.Transaction.Domain.csproj"
+              },
+              "C:\\Development\\Test\\DemoBank\\DemoBank.Transaction\\DemoBank.Account.Presentation\\DemoBank.Transaction.Api.csproj": {
+                "projectPath": "C:\\Development\\Test\\DemoBank\\DemoBank.Transaction\\DemoBank.Account.Presentation\\DemoBank.Transaction.Api.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "MSTest.TestAdapter": {
+              "target": "Package",
+              "version": "[1.4.0, )"
+            },
+            "MSTest.TestFramework": {
+              "target": "Package",
+              "version": "[1.4.0, )"
+            },
+            "Microsoft.AspNetCore.App": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[16.2.0, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "NSubstitute": {
+              "target": "Package",
+              "version": "[4.2.1, )"
+            },
+            "coverlet.collector": {
+              "target": "Package",
+              "version": "[1.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

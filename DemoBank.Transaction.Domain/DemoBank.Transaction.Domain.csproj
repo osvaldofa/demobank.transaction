@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" Version="2.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DemoBank.Transaction.CrossCutting\DemoBank.Transaction.CrossCutting.csproj" />
+    <ProjectReference Include="..\DemoBank.Transaction.Infrastructure.Communication\DemoBank.Transaction.Infrastructure.Communication.csproj" />
+    <ProjectReference Include="..\DemoBank.Transaction.Infrastructure.Data\DemoBank.Transaction.Infrastructure.Data.csproj" />
+  </ItemGroup>
+
+</Project>
