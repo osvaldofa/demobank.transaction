@@ -51,4 +51,8 @@ C:\Development\Test\DemoBank\DemoBank.Transaction\DemoBank.Transaction.Api\obj\D
 C:\Development\Test\DemoBank\DemoBank.Transaction\DemoBank.Transaction.Api\obj\Debug\netcoreapp2.2\DemoBank.Transaction.Api.dll
 C:\Development\Test\DemoBank\DemoBank.Transaction\DemoBank.Transaction.Api\obj\Debug\netcoreapp2.2\DemoBank.Transaction.Api.xml
 C:\Development\Test\DemoBank\DemoBank.Transaction\DemoBank.Transaction.Api\obj\Debug\netcoreapp2.2\DemoBank.Transaction.Api.pdb
-C:\Development\Test\DemoBank\DemoBank.Transaction\DemoBank.Transaction.Api\obj\Debug\netcoreapp2.2\DemoBank.Transaction.Api.csproj.CoreCompileInputs.cache
+C:\Development\Test\DemoBank\DemoBank.Transaction\DemoBank.Transaction.Api\bin\Debug\netcoreapp2.2\appsettings.Development.json
+C:\Development\Test\DemoBank\DemoBank.Transaction\DemoBank.Transaction.Api\bin\Debug\netcoreapp2.2\appsettings.Docker.Development.json
+C:\Development\Test\DemoBank\DemoBank.Transaction\DemoBank.Transaction.Api\bin\Debug\netcoreapp2.2\appsettings.Docker.json
+C:\Development\Test\DemoBank\DemoBank.Transaction\DemoBank.Transaction.Api\bin\Debug\netcoreapp2.2\appsettings.json
+C:\Development\Test\DemoBank\DemoBank.Transaction\DemoBank.Transaction.Api\bin\Debug\netcoreapp2.2\Properties\launchSettings.json

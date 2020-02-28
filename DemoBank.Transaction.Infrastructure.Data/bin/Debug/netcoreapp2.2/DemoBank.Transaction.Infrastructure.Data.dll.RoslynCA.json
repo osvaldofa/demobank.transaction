@@ -14,16 +14,16 @@
         {
           "ruleId": "S2933",
           "level": "warning",
-          "message": "Make 'Customers' 'readonly'.",
+          "message": "Make 'Accounts' 'readonly'.",
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Development/Test/DemoBank/DemoBank.Transaction/DemoBank.Transaction.Infrastructure.Data/Repositories/CustomerRepository.cs",
+                "uri": "file:///C:/Development/Test/DemoBank/DemoBank.Transaction/DemoBank.Transaction.Infrastructure.Data/Repositories/AccountRepository.cs",
                 "region": {
-                  "startLine": 10,
-                  "startColumn": 37,
-                  "endLine": 10,
-                  "endColumn": 46
+                  "startLine": 9,
+                  "startColumn": 36,
+                  "endLine": 9,
+                  "endColumn": 44
                 }
               }
             }
@@ -35,16 +35,16 @@
         {
           "ruleId": "S2933",
           "level": "warning",
-          "message": "Make 'Accounts' 'readonly'.",
+          "message": "Make 'Customers' 'readonly'.",
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Development/Test/DemoBank/DemoBank.Transaction/DemoBank.Transaction.Infrastructure.Data/Repositories/AccountRepository.cs",
+                "uri": "file:///C:/Development/Test/DemoBank/DemoBank.Transaction/DemoBank.Transaction.Infrastructure.Data/Repositories/CustomerRepository.cs",
                 "region": {
-                  "startLine": 9,
-                  "startColumn": 36,
-                  "endLine": 9,
-                  "endColumn": 44
+                  "startLine": 10,
+                  "startColumn": 37,
+                  "endLine": 10,
+                  "endColumn": 46
                 }
               }
             }

@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app.kubernetes.io/name: load-balancer-example
+  name: demobank-transaction
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: load-balancer-example
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: load-balancer-example
+    spec:
+      containers:
+      - image: demobank.azurecr.io/osvaldofa/demobank.transaction:latest
+        name: demobank-transaction
+        ports:
+        - containerPort: 80
+      imagePullSecrets:
+      - name: demobankacrsecret

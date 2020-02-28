@@ -13,4 +13,3 @@ C:\Development\Test\DemoBank\DemoBank.Transaction\DemoBank.Transaction.Infrastru
 C:\Development\Test\DemoBank\DemoBank.Transaction\DemoBank.Transaction.Infrastructure.Communication\obj\Debug\netcoreapp2.2\DemoBank.Transaction.Infrastructure.Communication.csproj.CopyComplete
 C:\Development\Test\DemoBank\DemoBank.Transaction\DemoBank.Transaction.Infrastructure.Communication\obj\Debug\netcoreapp2.2\DemoBank.Transaction.Infrastructure.Communication.dll
 C:\Development\Test\DemoBank\DemoBank.Transaction\DemoBank.Transaction.Infrastructure.Communication\obj\Debug\netcoreapp2.2\DemoBank.Transaction.Infrastructure.Communication.pdb
-C:\Development\Test\DemoBank\DemoBank.Transaction\DemoBank.Transaction.Infrastructure.Communication\obj\Debug\netcoreapp2.2\DemoBank.Transaction.Infrastructure.Communication.csproj.CoreCompileInputs.cache

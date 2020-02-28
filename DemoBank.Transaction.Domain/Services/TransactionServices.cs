@@ -3,6 +3,7 @@ using DemoBank.Transaction.Domain.Interfaces;
 using DemoBank.Transaction.Infrastructure.Communication;
 using DemoBank.Transaction.Infrastructure.Data.Models;
 using DemoBank.Transaction.Infrastructure.Data.Repositories;
+using Microsoft.Extensions.Logging;
 using System;
 
 namespace DemoBank.Transaction.Domain.Services
@@ -12,17 +13,19 @@ namespace DemoBank.Transaction.Domain.Services
         private readonly ITransactionRepository _transactionRepository;
         private readonly IAccountRepository _accountRepository;
         private readonly IAccountService _accountService;
+        private readonly ILogger<TransactionServices> _logger;
 
         /// <summary>
         /// Constructor method.
         /// </summary>
         /// <param name="transactionRepository">Transaction repository instantiated by dependency injection.</param>
         /// <param name="accountRepository">Account repository instantiated by dependency injection.</param>
-        public TransactionServices(ITransactionRepository transactionRepository, IAccountRepository accountRepository, IAccountService accountService)
+        public TransactionServices(ITransactionRepository transactionRepository, IAccountRepository accountRepository, IAccountService accountService, ILogger<TransactionServices> logger)
         {
             this._transactionRepository = transactionRepository;
             this._accountRepository = accountRepository;
             this._accountService = accountService;
+            this._logger = logger;
         }
 
         public long CreateTransaction(TransactionModel transaction)

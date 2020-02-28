@@ -21,7 +21,7 @@ namespace DemoBank.Transaction.Infrastructure.Communication.Services
         public bool UpdateAccountBalance(TransactionModel transaction)
         {
             string accountURL = this._config["AccountServiceURL"] + "/" + transaction.DestinationAccount.AccountNumber;
-            this._logger.LogInformation("----------> Sending Account Update to " + accountURL);
+            this._logger.LogInformation("----------> Sending Account Update to " + accountURL);            
 
             HttpResponseMessage response = httpClient.PutAsJsonAsync(accountURL, transaction).Result;
 
