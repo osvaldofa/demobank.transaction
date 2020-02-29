@@ -2,6 +2,7 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using System.Net.Http;
+using Newtonsoft.Json;
 
 namespace DemoBank.Transaction.Infrastructure.Communication.Services
 {
@@ -17,6 +18,23 @@ namespace DemoBank.Transaction.Infrastructure.Communication.Services
             this._config = config;
             this.httpClient = new HttpClient();
         }
+
+
+        /// <summary>
+        /// Verify ia an specific account exists.
+        /// </summary>
+        /// <param name="account">The account to be verified.</param>
+        /// <returns>True/False about the account existence.</returns>
+  /*      public AccountModel GetById(long accountNumber)
+        {
+            string accountURL = this._config["AccountServiceURL"] + "/" + accountNumber;
+            this._logger.LogInformation("----------> Verifying account existence: " + accountURL);
+
+            HttpResponseMessage response = httpClient.GetAsync(accountURL).Result;
+
+            AccountModel account = JsonConvert.DeserializeObject<AccountModel>(response.Content.ReadAsStringAsync().);
+            return account;
+        }*/
 
         public bool UpdateAccountBalance(TransactionModel transaction)
         {

@@ -36,9 +36,6 @@ namespace DemoBank.Transaction.Presentation
 
         private void ConfigureRepositoryInjections(IServiceCollection service)
         {
-            // Attaching Account Repository for data access provider.
-            service.AddSingleton(typeof(IAccountRepository), typeof(AccountRepository));
-
             // Attaching Customer Repository for data access provider.
             service.AddSingleton(typeof(ICustomerRepository), typeof(CustomerRepository));
 
