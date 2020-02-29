@@ -33,6 +33,9 @@ spec:
       containers:
       - name: demobank-transaction
         image: demobank.azurecr.io/osvaldofa/demobank.transaction:latest
+        env:
+          - name: account.service.address
+            value: '__account.service.address__'
         ports:
         - name: http 
           containerPort: 80
