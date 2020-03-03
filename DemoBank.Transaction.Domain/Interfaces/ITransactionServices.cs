@@ -5,6 +5,6 @@ namespace DemoBank.Transaction.Domain.Interfaces
     public interface ITransactionServices
     {
         long CreateTransaction(TransactionModel transaction);
-        TransactionModel[] TransactionsByAccountNumber(long AccountNumber);
+        TransactionModel[] TransactionsByAccountNumber(long accountNumber);
     }
 }

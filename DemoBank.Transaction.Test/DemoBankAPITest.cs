@@ -16,8 +16,7 @@ namespace DemoBank.Test
     {
         private ICustomerRepository customerRepository;
         private ITransactionRepository transactionRepository;
-        private IAccountRepository accountRepository;
-        private IAccountService accountService;
+        private IAccountService accountService;        
 
         private ITransactionServices transactionServices;        
         private ILogger<TransactionController> transactionLogger;
@@ -30,11 +29,10 @@ namespace DemoBank.Test
         public void TestInitialization()
         {
             this.customerRepository = Substitute.For<ICustomerRepository>(); ;
-            this.transactionRepository = Substitute.For<ITransactionRepository>(); ;
-            this.accountRepository = Substitute.For<IAccountRepository>();
+            this.transactionRepository = Substitute.For<ITransactionRepository>(); ;            
             this.accountService = Substitute.For<IAccountService>();
 
-            this.transactionServices = new TransactionServices(this.transactionRepository, this.accountRepository, this.accountService);
+            
             this.transactionLogger = Substitute.For<ILogger<TransactionController>>();
             this.transactionController = new TransactionController(this.transactionServices, this.transactionLogger);
         }
@@ -44,7 +42,7 @@ namespace DemoBank.Test
         {
             this.customerRepository = null;
             this.transactionRepository = null;
-            this.accountRepository = null;
+            this.accountService = null;
 
             this.transactionServices = null;
 
@@ -69,7 +67,7 @@ namespace DemoBank.Test
             transaction.TransactionType = TransactionTypes.DEPOSIT;
             transaction.Value = 100;
 
-            this.accountRepository.GetById(1101).Returns(account);
+            this.accountService.GetById(1101).Returns(account);
             this.transactionRepository.Save(transaction).ReturnsForAnyArgs(11001);
             this.accountService.UpdateAccountBalance(transaction).ReturnsForAnyArgs(true);
             
@@ -109,7 +107,7 @@ namespace DemoBank.Test
             transaction.Value = 100;
 
             TransactionModel[] transactions = { transaction };
-            this.accountRepository.GetById(1101).ReturnsForAnyArgs(account);
+            this.accountService.GetById(1101).ReturnsForAnyArgs(account);
             this.transactionRepository.GetTransactionsByAccountNumber(1101).ReturnsForAnyArgs(transactions);
 
             var result = this.transactionController.GetTransactionsByAccountNumber(1101);
