@@ -29,6 +29,13 @@
           "build/netstandard1.0/coverlet.collector.targets": {}
         }
       },
+      "coverlet.msbuild/2.6.0": {
+        "type": "package",
+        "build": {
+          "build/netstandard2.0/coverlet.msbuild.props": {},
+          "build/netstandard2.0/coverlet.msbuild.targets": {}
+        }
+      },
       "Microsoft.AspNet.WebApi.Client/5.2.6": {
         "type": "package",
         "dependencies": {
@@ -5219,6 +5226,62 @@
         "build/netstandard1.0/coverlet.core.pdb",
         "coverlet.collector.1.0.1.nupkg.sha512",
         "coverlet.collector.nuspec"
+      ]
+    },
+    "coverlet.msbuild/2.6.0": {
+      "sha512": "UgWFUV5x4pTkoIvytNyOpjKxOIVguawsBbJ4DPxJwqGegYOUCzwktoDsr2OwYypHmBYzGQJtKg2XkbBQmD/CXA==",
+      "type": "package",
+      "path": "coverlet.msbuild/2.6.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/netstandard2.0/Microsoft.Build.Framework.dll",
+        "build/netstandard2.0/Microsoft.Build.Utilities.Core.dll",
+        "build/netstandard2.0/Microsoft.CSharp.dll",
+        "build/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.dll",
+        "build/netstandard2.0/Mono.Cecil.Mdb.dll",
+        "build/netstandard2.0/Mono.Cecil.Pdb.dll",
+        "build/netstandard2.0/Mono.Cecil.Rocks.dll",
+        "build/netstandard2.0/Mono.Cecil.dll",
+        "build/netstandard2.0/Newtonsoft.Json.dll",
+        "build/netstandard2.0/System.AppContext.dll",
+        "build/netstandard2.0/System.Collections.Concurrent.dll",
+        "build/netstandard2.0/System.Collections.Immutable.dll",
+        "build/netstandard2.0/System.Collections.NonGeneric.dll",
+        "build/netstandard2.0/System.Dynamic.Runtime.dll",
+        "build/netstandard2.0/System.IO.FileSystem.Primitives.dll",
+        "build/netstandard2.0/System.Linq.Expressions.dll",
+        "build/netstandard2.0/System.Linq.dll",
+        "build/netstandard2.0/System.ObjectModel.dll",
+        "build/netstandard2.0/System.Private.DataContractSerialization.dll",
+        "build/netstandard2.0/System.Reflection.Emit.ILGeneration.dll",
+        "build/netstandard2.0/System.Reflection.Emit.Lightweight.dll",
+        "build/netstandard2.0/System.Reflection.Emit.dll",
+        "build/netstandard2.0/System.Reflection.Metadata.dll",
+        "build/netstandard2.0/System.Reflection.TypeExtensions.dll",
+        "build/netstandard2.0/System.Resources.Reader.dll",
+        "build/netstandard2.0/System.Runtime.Numerics.dll",
+        "build/netstandard2.0/System.Runtime.Serialization.Primitives.dll",
+        "build/netstandard2.0/System.Runtime.Serialization.Xml.dll",
+        "build/netstandard2.0/System.Security.Cryptography.Primitives.dll",
+        "build/netstandard2.0/System.Text.RegularExpressions.dll",
+        "build/netstandard2.0/System.Threading.Tasks.Extensions.dll",
+        "build/netstandard2.0/System.Threading.Tasks.Parallel.dll",
+        "build/netstandard2.0/System.Threading.Thread.dll",
+        "build/netstandard2.0/System.Threading.ThreadPool.dll",
+        "build/netstandard2.0/System.Threading.dll",
+        "build/netstandard2.0/System.Xml.ReaderWriter.dll",
+        "build/netstandard2.0/System.Xml.XDocument.dll",
+        "build/netstandard2.0/System.Xml.XmlDocument.dll",
+        "build/netstandard2.0/System.Xml.XmlSerializer.dll",
+        "build/netstandard2.0/coverlet.core.dll",
+        "build/netstandard2.0/coverlet.core.pdb",
+        "build/netstandard2.0/coverlet.msbuild.props",
+        "build/netstandard2.0/coverlet.msbuild.targets",
+        "build/netstandard2.0/coverlet.msbuild.tasks.dll",
+        "build/netstandard2.0/coverlet.msbuild.tasks.pdb",
+        "coverlet.msbuild.2.6.0.nupkg.sha512",
+        "coverlet.msbuild.nuspec"
       ]
     },
     "Microsoft.AspNet.WebApi.Client/5.2.6": {
@@ -14090,7 +14153,8 @@
       "Microsoft.NET.Test.Sdk >= 16.2.0",
       "Microsoft.NETCore.App >= 2.2.0",
       "NSubstitute >= 4.2.1",
-      "coverlet.collector >= 1.0.1"
+      "coverlet.collector >= 1.0.1",
+      "coverlet.msbuild >= 2.6.0"
     ]
   },
   "packageFolders": {
@@ -14177,6 +14241,12 @@
           "coverlet.collector": {
             "target": "Package",
             "version": "[1.0.1, )"
+          },
+          "coverlet.msbuild": {
+            "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+            "suppressParent": "All",
+            "target": "Package",
+            "version": "[2.6.0, )"
           }
         },
         "imports": [
