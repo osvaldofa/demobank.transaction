@@ -37,13 +37,24 @@ namespace DemoBank.Transaction.Presentation
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
-            
+            services.AddResponseCompression();
+
             // Configuring dependency injections
             ConfigureInjections(services);
 
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo { Title = "DemoBank API", Version = "v1" });
+            });
+
+            services.AddCors(options =>
+            {
+                options.AddPolicy(
+                  "CorsPolicy",
+                  builder => builder.WithOrigins("http://localhost:4200")
+                  .AllowAnyMethod()
+                  .AllowAnyHeader()
+                  .AllowCredentials());
             });
         }
 
@@ -70,6 +81,8 @@ namespace DemoBank.Transaction.Presentation
                 c.SwaggerEndpoint($"{swaggerJsonBasePath}/swagger/v1/swagger.json", "DemoBank API Transaction V1");
             });
 
+            app.UseCors("CorsPolicy");
+            app.UseResponseCompression();
             app.UseMvc();
         }
     }
