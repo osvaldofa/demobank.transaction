@@ -1,0 +1,49 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    service.beta.kubernetes.io/azure-load-balancer-internal: "false"
+  name: demobank-transaction-svc
+  labels:
+    app: demobank-transaction
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 80
+    targetPort: 80
+    protocol: TCP
+    name: http
+  selector:
+    app: demobank-transaction
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: demobank-transaction-app-dep
+spec:
+  selector:
+    matchLabels:
+      app: demobank-transaction
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: demobank-transaction
+    spec:
+      containers:
+      - name: demobank-transaction
+        image: demobank.azurecr.io/osvaldofa/demobank.transaction:latest
+        env:
+          - name: account.service.address
+            value: '__account.service.address__'
+        ports:
+        - name: http 
+          containerPort: 80
+          protocol: TCP
+      imagePullSecrets:
+      - name: demobankacrsecret
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 25%
+      maxSurge: 25%

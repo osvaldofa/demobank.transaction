@@ -3,26 +3,28 @@ using DemoBank.Transaction.Domain.Interfaces;
 using DemoBank.Transaction.Infrastructure.Communication;
 using DemoBank.Transaction.Infrastructure.Data.Models;
 using DemoBank.Transaction.Infrastructure.Data.Repositories;
+using Microsoft.Extensions.Logging;
 using System;
 
 namespace DemoBank.Transaction.Domain.Services
 {
     public class TransactionServices : ITransactionServices
     {
-        private ITransactionRepository _transactionRepository;
-        private IAccountRepository _accountRepository;
-        private IAccountService _accountService;
+        private readonly ITransactionRepository _transactionRepository;        
+        private readonly IAccountService _accountService;
+        private readonly ILogger<TransactionServices> _logger;
 
         /// <summary>
         /// Constructor method.
         /// </summary>
         /// <param name="transactionRepository">Transaction repository instantiated by dependency injection.</param>
-        /// <param name="accountRepository">Account repository instantiated by dependency injection.</param>
-        public TransactionServices(ITransactionRepository transactionRepository, IAccountRepository accountRepository, IAccountService accountService)
+        /// <param name="accountService">Account service integration instantiated by dependency injection.</param>
+        /// <param name="logger">Logger component.</param>
+        public TransactionServices(ITransactionRepository transactionRepository, IAccountService accountService, ILogger<TransactionServices> logger)
         {
             this._transactionRepository = transactionRepository;
-            this._accountRepository = accountRepository;
             this._accountService = accountService;
+            this._logger = logger;
         }
 
         public long CreateTransaction(TransactionModel transaction)
@@ -43,14 +45,13 @@ namespace DemoBank.Transaction.Domain.Services
 
         public TransactionModel[] TransactionsByAccountNumber(long accountNumber)
         {
-            if (AccountExists(accountNumber))
-                return this._transactionRepository.GetTransactionsByAccountNumber(accountNumber);
-            return null;
+            return this._transactionRepository.GetTransactionsByAccountNumber(accountNumber);
+         
         }
 
         private long CreateDepositTransaction(TransactionModel transaction)
         {
-            if (AccountExists(transaction?.DestinationAccount) && transaction.Value > 0)
+            if (transaction != null)
             {
                 // If external Account update.
                 if (this._accountService.UpdateAccountBalance(transaction))
@@ -59,58 +60,46 @@ namespace DemoBank.Transaction.Domain.Services
                     transaction.When = DateTime.Now;
                     long transactionId = this._transactionRepository.Save(transaction);
                     return transactionId;
-                }
+                }             
             }                
             return 0;
         }
 
         private long CreateWithdrawTransaction(TransactionModel transaction)
         {
-            if (AccountExists(transaction?.DestinationAccount)
-                && AccountEnoughtBalance(transaction.DestinationAccount, transaction.Value))
+            if (transaction != null)
             {
-                // Transaction registration.
-                transaction.When = DateTime.Now;
-                long transactionId = this._transactionRepository.Save(transaction);
+                // If external Account update.
+                if (this._accountService.UpdateAccountBalance(transaction))
+                {
+                    // Transaction registration.
+                    transaction.When = DateTime.Now;
+                    long transactionId = this._transactionRepository.Save(transaction);
 
-                // Account update.
-                AccountModel account = this._accountRepository.GetById(transaction.DestinationAccount.AccountNumber);
-                account.Balance -= transaction.Value;
-                this._accountRepository.Save(account);
-
-                return transactionId;
+                    return transactionId;
+                }             
             }
             return 0;
         }
 
         private long CreateTransferTransaction(TransactionModel transaction)
         {
-            if (AccountExists(transaction.DestinationAccount)
-                && AccountExists(transaction.OriginAccount)
-                && AccountEnoughtBalance(transaction.OriginAccount, transaction.Value))
+            long transactionId = 0;
+
+            if (this._accountService.UpdateAccountBalance(transaction))
             {
                 // Transaction registration.
                 transaction.When = DateTime.Now;
-                long transactionId = this._transactionRepository.Save(transaction);
-
-                // Account update.
-                AccountModel originAccount = this._accountRepository.GetById(transaction.OriginAccount.AccountNumber);
-                originAccount.Balance -= transaction.Value;
-                this._accountRepository.Save(originAccount);
-
-                AccountModel destinationAccount = this._accountRepository.GetById(transaction.DestinationAccount.AccountNumber);
-                destinationAccount.Balance += transaction.Value;
-                this._accountRepository.Save(destinationAccount);
-
-                return transactionId;
-            }
-            return 0;
+                transactionId = this._transactionRepository.Save(transaction);
+            }                
+            
+            return transactionId;
         }
 
-        private bool AccountExists(AccountModel account)
+       /* private bool AccountExists(AccountModel account)
         {
             if (account?.AccountNumber > 0
-                && this._accountRepository.GetById(account.AccountNumber) != null)
+                && this._accountService.GetById(account.AccountNumber) != null)
                 return true;
             return false;
         }
@@ -118,17 +107,18 @@ namespace DemoBank.Transaction.Domain.Services
         private bool AccountExists(long accountNumber)
         {
             if (accountNumber > 0
-                && this._accountRepository.GetById(accountNumber) != null)
+                && this._accountService.GetById(accountNumber) != null)
                 return true;
             return false;
         }
 
         private bool AccountEnoughtBalance(AccountModel account, double value)
         {
-            AccountModel accountFound = this._accountRepository.GetById(account.AccountNumber);
+            AccountModel accountFound = this._accountService.GetById(account.AccountNumber);
+
             if (accountFound?.Balance > value)
                 return true;
             return false;
-        }
+        }*/
     }
 }
